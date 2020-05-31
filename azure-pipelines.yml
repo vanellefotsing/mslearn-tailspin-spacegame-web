@@ -49,6 +49,13 @@ steps:
 - task: ContrastIntegration@2
   inputs:
     ContrastService: 'Contrast connection'
+    Application: 'b2172a56-af01-444a-9005-138a8213ef7d' #application ID in Contrast
+    CriticalLimit: '0'
+    HighLimit: '0'
+    MediumLimit: '-1'
+    LowLimit: '-1'
+    NoteLimit: '-1'
+
 
 - task: DotNetCoreCLI@2
   displayName: 'Publish the project - Release'
