@@ -49,7 +49,7 @@ steps:
 - task: ContrastIntegration@2
   inputs:
     ContrastService: 'Contrast connection'
-    Application: 'b2172a56-af01-444a-9005-138a8213ef7d' #application ID in Contrast
+    Application: 'ef66df5f-77cb-49b5-a2af-d43b9c4224e3' #application ID in Contrast
     CriticalLimit: '0'
     HighLimit: '0'
     MediumLimit: '-1'
