@@ -1,7 +1,5 @@
 # ASP.NET Core (.NET Framework)
-- task: ContrastIntegration@2
-  inputs:
-    ContrastService: 'Contrast connection'
+
 # Build and test ASP.NET Core projects targeting the full .NET Framework.
 # Add steps that publish symbols, save build artifacts, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
@@ -47,6 +45,10 @@ steps:
     command: 'build'
     arguments: '--no-restore --configuration Release'
     projects: '**/*.csproj'
+
+- task: ContrastIntegration@2
+  inputs:
+    ContrastService: 'Contrast connection'
 
 - task: DotNetCoreCLI@2
   displayName: 'Publish the project - Release'
